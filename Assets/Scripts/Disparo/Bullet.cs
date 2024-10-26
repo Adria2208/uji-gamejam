@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float bulletspeed = 1f;
+    public int bulletTime = 5;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += transform.right * Time.deltaTime * bulletspeed;
-    
+        StartCoroutine(BulletDeath());
     }
     void Die()
     {
@@ -30,6 +31,12 @@ public class Bullet : MonoBehaviour
         {
             Die();
         }
+    }
+     
+     IEnumerator BulletDeath()
+    {       
+        yield return new WaitForSeconds(bulletTime);
+        Die();
     }
     
       
