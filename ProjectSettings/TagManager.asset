@@ -10,6 +10,7 @@ TagManager:
   - Treat
   - Wall
   - Enemy
+  - Candy
   layers:
   - Default
   - TransparentFX
