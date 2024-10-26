@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    [SerializeField] private House[] houses;
+    [SerializeField] private HouseHealth[] houses;
 
     private void Awake()
     {
@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void HouseInteracted(House house){
-        house.Interact();
-    }
+
 
 }
