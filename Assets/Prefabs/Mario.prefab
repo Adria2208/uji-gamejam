@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1268773304124221307}
   - component: {fileID: 3813965675263916677}
   - component: {fileID: 3692276520296615782}
+  - component: {fileID: 4739737597100722203}
   - component: {fileID: 4886495338720606791}
   m_Layer: 3
   m_Name: Mario
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2427965889659888765}
@@ -178,7 +179,29 @@ MonoBehaviour:
   treat: {fileID: 2741674862080001041, guid: 04d9d91b81d1323409e3fd40d621b906, type: 3}
   trick: {fileID: 2741674862080001041, guid: ef54687a9a4d9e049b80473d589247c0, type: 3}
   FirePoint: {fileID: 6798815831796426188}
-  Seconds: 10
+  fireRate: 25
+  canFire: 1
+--- !u!114 &4739737597100722203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416916708519306205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 939558b701ccc9349a020e2e28f22ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canHarm: 1
+  time: 1
+  force: {fileID: 0}
+  knockBackForce: 10
+  knockBackForceUp: 2
+  KBCounter: 0
+  KBTotalTime: 0
+  knockFromRight: 0
+  playerSprite: {fileID: 0}
 --- !u!114 &4886495338720606791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  carameloManager: {fileID: 0}
 --- !u!1 &6760140350734631582
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +455,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -1236969924, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
+  m_Sprite: {fileID: 363973617, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -455,8 +479,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idle: {fileID: 363973617, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
-  jump: {fileID: 408557137, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
-  slide: {fileID: -948502317, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
+  jump: {fileID: 790725966, guid: 775b72aac9928b9f1ab72145ee9077c1, type: 3}
+  slide: {fileID: 21300000, guid: 135769eecab1ad2bc9d8128991e55190, type: 3}
   run: {fileID: 7642035917145133628}
 --- !u!114 &7642035917145133628
 MonoBehaviour:
