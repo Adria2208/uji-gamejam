@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -7,6 +6,8 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private House[] houses;
+
+    public int playerLives = 5;
 
     private void Awake()
     {
@@ -20,8 +21,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start() {
+        UIManager.Instance.UpdateLivesCounter(playerLives);
+    }
+
     public void HouseInteracted(House house){
         house.Interact();
+    }
+
+    public void SubtractLife(){
+        playerLives--;
+        UIManager.Instance.UpdateLivesCounter(playerLives);
+    }
+
+    public int GetCurrentLives(){
+        return playerLives;
     }
 
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-    public int lives;
     public bool canHarm = true;
     private Rigidbody2D rb;
     public int time;
@@ -25,14 +24,15 @@ public class PlayerDeath : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision) {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-
-        
-            if (lives > 0){
-                if (canHarm){
+            if (GameManager.Instance.GetCurrentLives() > 0)
+            {
+                if (canHarm)
+                {
                     harm();
                 }
             }
@@ -47,17 +47,17 @@ public class PlayerDeath : MonoBehaviour
     private void harm()
     {
         canHarm = false;
-        lives--;
-        rb.AddForce (Vector2.up*knockBackForceUp, ForceMode2D.Impulse);
+        GameManager.Instance.SubtractLife();
+        rb.AddForce(Vector2.up * knockBackForceUp, ForceMode2D.Impulse);
         StartCoroutine(DeathHandler());
     }
     private void Die()
     {
-        Destroy (gameObject);
+        Destroy(gameObject);
     }
     IEnumerator DeathHandler()
     {
-        
+
         yield return new WaitForSeconds(time);
         canHarm = true;
     }
