@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class HouseHealth : MonoBehaviour
 {
-    public int live = 100;
+    public int life = 100;
     public Sprite completedSprite;
-    public bool complet = false;
-    
+    public bool complete = false;
+
     void Update()
     {
-        
+
     }
-    private void OnTriggerEnter2D(Collider2D collision) {
-        
-            if (collision.CompareTag(this.gameObject.tag))
-            {
-                Debug.Log("Collision");
-            if(live <= 0)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag(this.gameObject.tag))
+        {
+            Debug.Log("Collision");
+            if (life <= 0)
             {
                 Die();
-                transform.parent.GetComponent<HouseList>().housesCompleted ++;
+                transform.parent.GetComponent<HouseList>().housesCompleted++;
             }
             else
             {
-                live --;
+                life--;
             }
-            }
+        }
 
-        
+
     }
     private void Die()
     {
-        
         this.GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<SpriteRenderer>().sprite = completedSprite;
     }
