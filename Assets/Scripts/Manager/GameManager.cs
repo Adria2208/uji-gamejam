@@ -12,6 +12,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI endText;
     public GameObject victoryText;
     public GameObject loseText;
+    public int acitveHouses;
+    public int completeHouses;
+    //Casas
+    public TextMeshProUGUI houseText;
+
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -53,6 +59,7 @@ public class GameManager : MonoBehaviour
 
         Victory();
         Defeat();
+        Houses();
     }
 
     //Acabar el juego
@@ -74,6 +81,15 @@ public class GameManager : MonoBehaviour
             loseText.SetActive(true);
             Time.timeScale = 0;
         }
+    }
+
+//Contador de casas
+    public void Houses()
+    {
+        acitveHouses = (listaCasas.GetComponent<HouseList>().houses.Count);
+        completeHouses = (listaCasas.GetComponent<HouseList>().housesCompleted) ;
+        
+        houseText.SetText("Houses: " + completeHouses.ToString() + "/" + acitveHouses.ToString());
     }
 
 }
