@@ -21,11 +21,11 @@ public class Bullet : MonoBehaviour
         Destroy (gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.CompareTag("Enemy"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            gameObject.tag = "Bullet";
             Die();
         }
+        
          if (collision.CompareTag("Wall"))
         {
             Die();
