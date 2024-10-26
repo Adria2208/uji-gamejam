@@ -5,14 +5,14 @@ public class Player : MonoBehaviour
 {
     [SerializeField] new private Rigidbody2D rigidbody;
 
-    public CarameloManager cm;
+    public CarameloManager carameloManager;
 
 
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
 
-        cm = GameObject.Find("GameManager").GetComponent<CarameloManager>();
+        carameloManager = GameObject.Find("GameManager").GetComponent<CarameloManager>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
      if (other.CompareTag("Candy"))  
         {
             Destroy(other.gameObject);
-            cm.carameloCount++;
+            carameloManager.carameloCount++;
         }
     }
 
