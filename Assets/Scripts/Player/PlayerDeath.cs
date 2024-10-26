@@ -18,6 +18,8 @@ public class PlayerDeath : MonoBehaviour
     public float KBTotalTime;
 
     public bool knockFromRight;
+
+    [SerializeField] private SpriteRenderer playerSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,9 +59,25 @@ public class PlayerDeath : MonoBehaviour
     }
     IEnumerator DeathHandler()
     {
-
+        
         yield return new WaitForSeconds(time);
         canHarm = true;
+    }
+
+    public void StartFlashColorAnimation(Color color, float flashFramerate, int iterations = 5)
+    {
+        StartCoroutine(PlayRedFlashAnimation(color, flashFramerate, iterations));
+    }
+
+    private IEnumerator PlayRedFlashAnimation(Color color, float flashFramerate, int iterations)
+    {
+        for (int i = 0; i < iterations; i++)
+        {
+            playerSprite.color = color;
+            yield return new WaitForSecondsRealtime(flashFramerate);
+            playerSprite.color = Color.white;
+            yield return new WaitForSecondsRealtime(flashFramerate);
+        }
     }
 }
 
