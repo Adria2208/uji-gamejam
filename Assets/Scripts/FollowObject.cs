@@ -15,10 +15,12 @@ public class FollowPlayer : MonoBehaviour
         zAxis = transform.position.z;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        gameObject.transform.position =  GetNextPosition();
+        if (followPoint != null)
+        {
+            gameObject.transform.position = GetNextPosition();
+        }
     }
 
     private Vector3 GetNextPosition()

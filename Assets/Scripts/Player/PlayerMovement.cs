@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp")) {
             if (transform.DotTest(collision.GetContact(0).point, Vector2.up))
             {
-                Debug.Log(collision.GetContact(0).point);
+                // Debug.Log(collision.GetContact(0).point);
                 velocity.y = 0f;
             }
         }
