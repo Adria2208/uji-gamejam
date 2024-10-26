@@ -49,6 +49,7 @@ public class CharacterShooting : MonoBehaviour
     IEnumerator FireHandler()
     {
         float timeToNextFire = 1 / fireRate;
+        SoundManager.PlaySound(SoundType.SHOOT, 0, false);
         yield return new WaitForSeconds(timeToNextFire);
         canFire = true;
     }

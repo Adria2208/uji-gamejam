@@ -54,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = jumpForce;
             isJumping = true;
+            SoundManager.PlaySound(SoundType.JUMP, 0, false);
         }
     }
     private void HorizontalMovement()
