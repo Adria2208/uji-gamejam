@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1268773304124221307}
   - component: {fileID: 3813965675263916677}
   - component: {fileID: 3692276520296615782}
+  - component: {fileID: 4886495338720606791}
   m_Layer: 3
   m_Name: Mario
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2427965889659888765}
@@ -178,6 +179,19 @@ MonoBehaviour:
   trick: {fileID: 2741674862080001041, guid: ef54687a9a4d9e049b80473d589247c0, type: 3}
   FirePoint: {fileID: 6798815831796426188}
   Seconds: 10
+--- !u!114 &4886495338720606791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6416916708519306205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf20ef1d629436dbd8d7afe28364d03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 0}
 --- !u!1 &6760140350734631582
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,13 +203,14 @@ GameObject:
   - component: {fileID: 4016743387011116325}
   - component: {fileID: 7712267686370628373}
   - component: {fileID: 8410866023175573880}
+  - component: {fileID: 3110758387538099301}
   m_Layer: 3
   m_Name: Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4016743387011116325
 Transform:
   m_ObjectHideFlags: 0
@@ -278,7 +293,25 @@ MonoBehaviour:
   idle: {fileID: -1226888341, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
   jump: {fileID: -177096101, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
   slide: {fileID: 1506341499, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
-  run: {fileID: 1504948360, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
+  run: {fileID: 3110758387538099301}
+--- !u!114 &3110758387538099301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6760140350734631582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e281a6e6696f54d46aa6edb738d0b30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 1504948360, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
+  - {fileID: 1364220615, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
+  - {fileID: -940002142, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
+  - {fileID: 1364220615, guid: 8b982bb3e4d3e634cb5c8f97d9e2d5e6, type: 3}
+  framerate: 0.16666667
 --- !u!1 &7961506528017357939
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +367,7 @@ GameObject:
   - component: {fileID: 2427965889659888765}
   - component: {fileID: 6236811910407169696}
   - component: {fileID: 2022809589355383259}
+  - component: {fileID: 7642035917145133628}
   m_Layer: 3
   m_Name: Small
   m_TagString: Untagged
@@ -420,7 +454,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6810a2a6d34bd0d4a85eb8c995c9dced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idle: {fileID: -1236969924, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
+  idle: {fileID: 363973617, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
   jump: {fileID: 408557137, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
   slide: {fileID: -948502317, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
-  run: {fileID: 440857818, guid: c9301d7fa0fa59f4aa8a037c36ab24a2, type: 3}
+  run: {fileID: 7642035917145133628}
+--- !u!114 &7642035917145133628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979682830331322530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e281a6e6696f54d46aa6edb738d0b30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 363973617, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: 1396661394, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: -1362508792, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: 1770232968, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: 127814315, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: 976202201, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: -1429426666, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  - {fileID: -2130658467, guid: 04ea99573bd391291aceb11e5e7dbe01, type: 3}
+  framerate: 0.16666667
