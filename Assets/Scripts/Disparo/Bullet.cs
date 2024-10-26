@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -9,11 +10,16 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
     // Update is called once per frame
     
     void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
         transform.position += transform.right * Time.deltaTime * bulletspeed;
         StartCoroutine(BulletDeath());
     }
