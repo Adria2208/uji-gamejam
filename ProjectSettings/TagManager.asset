@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Collision
+  - Bullet
+  - Trick
+  - Treat
+  - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - PowerUp
   - Enemy
   - Block
-  - 
+  - Bullet
   - 
   - 
   - 
