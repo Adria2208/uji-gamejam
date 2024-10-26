@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    [SerializeField] private House[] houses;
+    [SerializeField] private HouseHealth[] houses;
 
     public int playerLives = 5;
 
@@ -25,9 +25,10 @@ public class GameManager : MonoBehaviour
         UIManager.Instance.UpdateLivesCounter(playerLives);
     }
 
-    public void HouseInteracted(House house){
-        house.Interact();
-    }
+    // public void HouseInteracted(House house){
+    //     house.Interact();
+    // }
+
 
     public void SubtractLife(){
         playerLives--;

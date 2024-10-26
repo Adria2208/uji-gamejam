@@ -19,12 +19,15 @@ public class EnemiesDeath : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
+        {
             if (collision.CompareTag(this.gameObject.tag))
             {
                 Debug.Log("Collision");
                 live --;
             }
+        }
+            
 
         
     }
