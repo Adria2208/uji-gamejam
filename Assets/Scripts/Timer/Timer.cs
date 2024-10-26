@@ -44,4 +44,8 @@ public class Timer : MonoBehaviour
     {
         timerIsRunning = false;
     }
+
+    public void AddTime(float time){
+        secondsRemaining += time;
+    }
 }

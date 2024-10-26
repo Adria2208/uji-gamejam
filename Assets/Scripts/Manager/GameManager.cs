@@ -7,17 +7,18 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private HouseHealth[] houses;
+    [SerializeField] private Timer timer;
     public GameObject listaCasas;
     public int playerLives = 5;
     public TextMeshProUGUI endText;
     public GameObject victoryText;
     public GameObject loseText;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(this);
-
         }
         else
         {
@@ -32,11 +33,6 @@ public class GameManager : MonoBehaviour
         loseText.SetActive(false);
         Time.timeScale = 1;
     }
-
-    // public void HouseInteracted(House house){
-    //     house.Interact();
-    // }
-
 
     public void SubtractLife()
     {
@@ -70,10 +66,14 @@ public class GameManager : MonoBehaviour
     {
         if (playerLives == 0)
         {
-
             loseText.SetActive(true);
             Time.timeScale = 0;
         }
+    }
+
+    public void AddCandy(int candy){
+        float time = candy;
+        timer.AddTime(time);
     }
 
 }
