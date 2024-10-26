@@ -23,17 +23,15 @@ public class EnemiesDeath : MonoBehaviour
         {
             if (collision.CompareTag(this.gameObject.tag))
             {
-                Debug.Log("Collision");
+                // Debug.Log("Collision");
                 live --;
             }
         }
-            
-
-        
     }
 
     private void Die()
     {
+        SoundManager.PlaySound(SoundType.DEATH, 0, false);
         Destroy (gameObject);
     }
 

@@ -28,7 +28,7 @@ public class HouseList : MonoBehaviour
                 houses.Add(pathTransform[i]);
             }
         }
-        Debug.Log(houses.Count);
+        //Debug.Log(houses.Count);
         if (houses.Count == housesCompleted)
         {
             completed = true;

@@ -35,7 +35,7 @@ public class PlayerDeath : MonoBehaviour
             {
                 if (canHarm)
                 {
-                    harm();
+                    Harm();
                 }
             }
             else
@@ -46,7 +46,7 @@ public class PlayerDeath : MonoBehaviour
     }
 
 
-    private void harm()
+    private void Harm()
     {
         canHarm = false;
         GameManager.Instance.SubtractLife();
@@ -55,11 +55,12 @@ public class PlayerDeath : MonoBehaviour
     }
     private void Die()
     {
+        SoundManager.PlaySound(SoundType.DEATH, 2, false);
         Destroy(gameObject);
     }
     IEnumerator DeathHandler()
     {
-        
+        SoundManager.PlaySound(SoundType.DEATH, 1, false);
         yield return new WaitForSeconds(time);
         canHarm = true;
     }

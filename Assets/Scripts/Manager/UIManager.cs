@@ -4,7 +4,7 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
 
-    [SerializeField] private InteractText interactText;
+    // [SerializeField] private InteractText interactText;
     [SerializeField] private LivesCounter livesCounter;
 
     private void Awake()
@@ -19,13 +19,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void SetInteractTextVisible(){
-        interactText.SetVisible();
-    }
+    // public void SetInteractTextVisible(){
+    //     interactText.SetVisible();
+    // }
 
-    public void SetInteractTextInvisible(){
-        interactText.SetInvisible();
-    }
+    // public void SetInteractTextInvisible(){
+    //     interactText.SetInvisible();
+    // }
 
     public void UpdateLivesCounter(int lives){
         livesCounter.UpdateLivesCounter(lives);
