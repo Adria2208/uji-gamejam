@@ -9,15 +9,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HouseHealth[] houses;
     public GameObject listaCasas;
     public int playerLives = 5;
-    public TextMeshProUGUI EndText;
-    public GameObject victroyText;
-    public GameObject looseText;
+    public TextMeshProUGUI endText;
+    public GameObject victoryText;
+    public GameObject loseText;
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
             Destroy(this);
-            
+
         }
         else
         {
@@ -25,10 +25,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start() {
+    private void Start()
+    {
         UIManager.Instance.UpdateLivesCounter(playerLives);
-        victroyText.SetActive(false);
-        looseText.SetActive(false);
+        victoryText.SetActive(false);
+        loseText.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -37,40 +38,42 @@ public class GameManager : MonoBehaviour
     // }
 
 
-    public void SubtractLife(){
+    public void SubtractLife()
+    {
         playerLives--;
         UIManager.Instance.UpdateLivesCounter(playerLives);
     }
 
-    public int GetCurrentLives(){
+    public int GetCurrentLives()
+    {
         return playerLives;
     }
     void Update()
     {
-        
-        victory();
+
+        Victory();
         Defeat();
     }
 
     //Acabar el juego
-        //Completar todas las casas
-    public void victory()
+    //Completar todas las casas
+    public void Victory()
     {
-      if (listaCasas.GetComponent<HouseList>().completed == true)
+        if (listaCasas.GetComponent<HouseList>().completed == true)
         {
-            victroyText.SetActive(true);
+            victoryText.SetActive(true);
             Time.timeScale = 0;
-        }  
+        }
     }
-        //Morir
+    //Morir
     public void Defeat()
     {
         if (playerLives == 0)
         {
-        
-            looseText.SetActive(true);
+
+            loseText.SetActive(true);
             Time.timeScale = 0;
-        }       
+        }
     }
 
 }

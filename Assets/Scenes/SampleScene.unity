@@ -2417,6 +2417,18 @@ PrefabInstance:
       propertyPath: livesCounter
       value: 
       objectReference: {fileID: 1049767015}
+    - target: {fileID: 8657031636324439415, guid: 5d64fa58fd384ebc3a4d496ba270d108, type: 3}
+      propertyPath: loseText
+      value: 
+      objectReference: {fileID: 1557816354}
+    - target: {fileID: 8657031636324439415, guid: 5d64fa58fd384ebc3a4d496ba270d108, type: 3}
+      propertyPath: listaCasas
+      value: 
+      objectReference: {fileID: 1910010238}
+    - target: {fileID: 8657031636324439415, guid: 5d64fa58fd384ebc3a4d496ba270d108, type: 3}
+      propertyPath: victoryText
+      value: 
+      objectReference: {fileID: 1207142519}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2648,7 +2660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 840484247166666189, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 840484247166666189, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2822,6 +2834,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3489834932467432874, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
+      propertyPath: m_Name
+      value: Lose
+      objectReference: {fileID: 0}
     - target: {fileID: 4179599098055638522, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2885,6 +2901,10 @@ PrefabInstance:
     - target: {fileID: 5087383282448700195, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064189540749678110, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
+      propertyPath: m_Name
+      value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 7997081826915188730, guid: e4430241e44a3b83ca3390eff650e456, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
