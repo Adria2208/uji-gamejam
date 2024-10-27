@@ -6,6 +6,9 @@ public class EnemiesDeath : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
     public int life = 25;
+
+    [SerializeField] private FlashAnimation flashAnimation;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
@@ -25,6 +28,14 @@ public class EnemiesDeath : MonoBehaviour
             if (collision.CompareTag(this.gameObject.tag))
             {
                 SoundManager.PlaySound(SoundType.HIT, 0, false, (float).5);
+                if (gameObject.CompareTag("Trick"))
+                {
+                    flashAnimation.StartFlashOnceAnimation(Color.red);
+                }
+                else
+                {
+                    flashAnimation.StartFlashOnceAnimation(Color.yellow);
+                }
                 life--;
             }
             else

@@ -11,6 +11,8 @@ public class HouseHealth : MonoBehaviour
 
     private HouseSpriteManager houseSpriteManager;
 
+    [SerializeField] private FlashAnimation flashAnimation;
+
     private void Start()
     {
         houseSpriteManager = GetComponent<HouseSpriteManager>();
@@ -29,6 +31,7 @@ public class HouseHealth : MonoBehaviour
             else
             {
                 SoundManager.PlaySound(SoundType.HIT, 0, false, (float).5);
+                flashAnimation.StartFlashOnceAnimation(Color.yellow);
                 life--;
             }
         }

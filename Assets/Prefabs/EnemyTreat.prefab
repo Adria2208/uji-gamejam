@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 2590301586001791985}
   - component: {fileID: 7806346273171729114}
   - component: {fileID: 3765175703999818143}
+  - component: {fileID: 2933695044230107229}
   m_Layer: 9
   m_Name: Treat
   m_TagString: Treat
@@ -208,6 +209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 15
+  flashAnimation: {fileID: 2933695044230107229}
 --- !u!114 &7806346273171729114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +244,18 @@ MonoBehaviour:
   - {fileID: -298249819, guid: a65abcb0edfe8880abd78c550d03749a, type: 3}
   - {fileID: 723441410, guid: a65abcb0edfe8880abd78c550d03749a, type: 3}
   framerate: 0.1
+--- !u!114 &2933695044230107229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6921368580210089684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045249a78aca11c6b83b3fc11676216f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7606947665911794521
 GameObject:
   m_ObjectHideFlags: 0

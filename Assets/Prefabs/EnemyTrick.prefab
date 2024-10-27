@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 8141681201812153354}
   - component: {fileID: 7628322464744386804}
   - component: {fileID: 437924079641297329}
+  - component: {fileID: 1858499258491933082}
   m_Layer: 9
   m_Name: Trick
   m_TagString: Trick
@@ -270,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 15
+  flashAnimation: {fileID: 1858499258491933082}
 --- !u!114 &7628322464744386804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,3 +310,15 @@ MonoBehaviour:
   - {fileID: 593184887, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
   - {fileID: -1780663744, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
   framerate: 0.1
+--- !u!114 &1858499258491933082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567379831894584386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045249a78aca11c6b83b3fc11676216f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
