@@ -27,7 +27,7 @@ public class EnemiesDeath : MonoBehaviour
         {
             if (collision.CompareTag(this.gameObject.tag))
             {
-                SoundManager.PlaySound(SoundType.HIT, 0, false, (float).5);
+                SoundManager.PlaySound(SoundType.HIT, 0, false, (float).2);
                 if (gameObject.CompareTag("Trick"))
                 {
                     flashAnimation.StartFlashOnceAnimation(Color.red);
@@ -40,7 +40,7 @@ public class EnemiesDeath : MonoBehaviour
             }
             else
             {
-                SoundManager.PlaySound(SoundType.HIT, 1, false);
+                SoundManager.PlaySound(SoundType.HIT, 1, false, (float).5);
 
             }
         }

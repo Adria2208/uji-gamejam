@@ -40,7 +40,7 @@ public class CharacterShooting : MonoBehaviour
     void shotTreat()
     {
         //    canFire = false;
-        SoundManager.PlaySound(SoundType.SHOOT, 0, false, (float).75);
+        SoundManager.PlaySound(SoundType.SHOOT, 0, false, (float).5);
         Instantiate(treat, FirePoint.position, FirePoint.rotation);
         //    StartCoroutine(FireHandler());
         //    yield return null;
@@ -50,7 +50,7 @@ public class CharacterShooting : MonoBehaviour
     void shotTrick()
     {
         //    canFire = false;
-        SoundManager.PlaySound(SoundType.SHOOT, 0, false, (float).75);
+        SoundManager.PlaySound(SoundType.SHOOT, 0, false, (float).5);
         Instantiate(trick, FirePoint.position, FirePoint.rotation);
         //         StartCoroutine(FireHandler());
         //       yield return null;

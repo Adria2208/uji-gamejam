@@ -14,12 +14,14 @@ public class StartAgainButton : MonoBehaviour
   public void Quit()
   {
     Debug.LogWarning("Exiting the game!");
-    Application.Quit();
+    // Application.Quit();
+    SceneManager.LoadScene(0);
+
   }
 
   public void StartGame()
   {
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    SceneManager.LoadScene(0);
   }
 }
 

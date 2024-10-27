@@ -30,14 +30,14 @@ public class HouseHealth : MonoBehaviour
             }
             else
             {
-                SoundManager.PlaySound(SoundType.HIT, 0, false, (float).5);
+                SoundManager.PlaySound(SoundType.HIT, 0, false, (float).2);
                 flashAnimation.StartFlashOnceAnimation(Color.yellow);
                 life--;
             }
         }
         else if ((collision.CompareTag("Treat") || collision.CompareTag("Trick")) && collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
-            SoundManager.PlaySound(SoundType.HIT, 1, false);
+            SoundManager.PlaySound(SoundType.HIT, 1, false, (float).5);
         }
 
     }
