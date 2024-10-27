@@ -13,7 +13,7 @@ public class CharacterShooting : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -21,42 +21,44 @@ public class CharacterShooting : MonoBehaviour
     {
         time += Time.deltaTime;
         float nextTimeToFire = 1 / fireRate;
-        if(time >= nextTimeToFire){
-            if (Input.GetKey(KeyCode.Mouse0) )
+        if (time >= nextTimeToFire)
+        {
+            if (Input.GetKey(KeyCode.Mouse0))
             {
                 shotTreat();
                 time = 0;
             }
-            else if (Input.GetKey(KeyCode.Mouse1) )
+            else if (Input.GetKey(KeyCode.Mouse1))
             {
-                shotTrick();      
-                time = 0;  
+                shotTrick();
+                time = 0;
             }
-    }
+        }
     }
     //Disparar trato
     //IEnumerator 
     void shotTreat()
-    {       
+    {
         //    canFire = false;
-            Instantiate(treat, FirePoint.position, FirePoint.rotation);
+        SoundManager.PlaySound(SoundType.SHOOT, 0, false);
+        Instantiate(treat, FirePoint.position, FirePoint.rotation);
         //    StartCoroutine(FireHandler());
         //    yield return null;
     }
     //Disparar truco
     //IEnumerator
-     void shotTrick()
+    void shotTrick()
     {
         //    canFire = false;
-            Instantiate(trick, FirePoint.position, FirePoint.rotation);
-   //         StartCoroutine(FireHandler());
-     //       yield return null;
+        SoundManager.PlaySound(SoundType.SHOOT, 0, false);
+        Instantiate(trick, FirePoint.position, FirePoint.rotation);
+        //         StartCoroutine(FireHandler());
+        //       yield return null;
 
     }
     IEnumerator FireHandler()
     {
         float timeToNextFire = 1 / fireRate;
-        SoundManager.PlaySound(SoundType.SHOOT, 0, false);
         yield return new WaitForSeconds(timeToNextFire);
         canFire = true;
     }
