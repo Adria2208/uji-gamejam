@@ -12,10 +12,7 @@ public class PlayerDeath : MonoBehaviour
 
     //Knockback
     public PlayerMovement force;
-    public float knockBackForce = 10;
-    public float knockBackForceUp = 2;
-    public float KBCounter;
-    public float KBTotalTime;
+
 
     public bool knockFromRight;
 
@@ -50,7 +47,6 @@ public class PlayerDeath : MonoBehaviour
     {
         canHarm = false;
         GameManager.Instance.SubtractLife();
-        rb.AddForce(Vector2.up * knockBackForceUp, ForceMode2D.Impulse);
         StartCoroutine(DeathHandler());
     }
     private void Die()

@@ -9,6 +9,7 @@ public class CharacterShooting : MonoBehaviour
     public Transform FirePoint;
     public float fireRate;
     public bool canFire = true;
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,32 +19,38 @@ public class CharacterShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canFire){
+        time += Time.deltaTime;
+        float nextTimeToFire = 1 / fireRate;
+        if(time >= nextTimeToFire){
             if (Input.GetKey(KeyCode.Mouse0) )
             {
-                StartCoroutine(shotTreat());
+                shotTreat();
+                time = 0;
             }
             else if (Input.GetKey(KeyCode.Mouse1) )
             {
-                StartCoroutine(shotTrick());        
+                shotTrick();      
+                time = 0;  
             }
     }
     }
     //Disparar trato
-    IEnumerator shotTreat()
+    //IEnumerator 
+    void shotTreat()
     {       
-            canFire = false;
+        //    canFire = false;
             Instantiate(treat, FirePoint.position, FirePoint.rotation);
-            StartCoroutine(FireHandler());
-            yield return null;
+        //    StartCoroutine(FireHandler());
+        //    yield return null;
     }
     //Disparar truco
-    IEnumerator shotTrick()
+    //IEnumerator
+     void shotTrick()
     {
-            canFire = false;
+        //    canFire = false;
             Instantiate(trick, FirePoint.position, FirePoint.rotation);
-            StartCoroutine(FireHandler());
-            yield return null;
+   //         StartCoroutine(FireHandler());
+     //       yield return null;
 
     }
     IEnumerator FireHandler()
