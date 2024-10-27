@@ -5,26 +5,32 @@ using UnityEngine;
 public class EnemiesDeath : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
-    public int live = 25;
+    public int life = 25;
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
-        if(live <= 0)
+        if (life <= 0)
         {
             Die();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Bullet"))
         {
             if (collision.CompareTag(this.gameObject.tag))
             {
-                // Debug.Log("Collision");
-                live --;
+                SoundManager.PlaySound(SoundType.HIT, 0, false, (float).5);
+                life--;
+            }
+            else
+            {
+                SoundManager.PlaySound(SoundType.HIT, 1, false);
+
             }
         }
     }
@@ -32,7 +38,7 @@ public class EnemiesDeath : MonoBehaviour
     private void Die()
     {
         SoundManager.PlaySound(SoundType.DEATH, 0, false);
-        Destroy (gameObject);
+        Destroy(gameObject);
     }
 
 }

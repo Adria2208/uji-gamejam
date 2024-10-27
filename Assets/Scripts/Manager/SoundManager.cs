@@ -6,6 +6,7 @@ public enum SoundType
     JUMP,
     SHOOT,
     DEATH,
+    HIT,
     UI
 }
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

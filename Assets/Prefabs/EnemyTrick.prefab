@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 7544861141583276138}
   - component: {fileID: 8141681201812153354}
   - component: {fileID: 7628322464744386804}
+  - component: {fileID: 437924079641297329}
   m_Layer: 9
   m_Name: Trick
   m_TagString: Trick
@@ -174,7 +175,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -285,3 +286,25 @@ MonoBehaviour:
   - {fileID: 8008072654755092284}
   - {fileID: 7806826270107130400}
   speed: 3
+--- !u!114 &437924079641297329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567379831894584386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e281a6e6696f54d46aa6edb738d0b30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -1812779814, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -1612212035, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -1939914490, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -1927704177, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -310176498, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -533586210, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: 593184887, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  - {fileID: -1780663744, guid: b4fb575e0b87108f88e76e3ceb66076f, type: 3}
+  framerate: 0.1
