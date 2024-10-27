@@ -7,6 +7,7 @@ public class Candy : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             GameManager.Instance.AddCandy(1);
+            SoundManager.PlaySound(SoundType.JUMP, 1, false, (float).5);
         }
     }
 }

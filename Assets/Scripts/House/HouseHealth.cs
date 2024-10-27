@@ -45,6 +45,7 @@ public class HouseHealth : MonoBehaviour
     {
         this.GetComponent<BoxCollider2D>().enabled = false;
         houseSpriteManager.ChangeSprite();
+        SoundManager.PlaySound(SoundType.DEATH, 3, false, 3);
         GameManager.Instance.AddCandy(50);
     }
 
