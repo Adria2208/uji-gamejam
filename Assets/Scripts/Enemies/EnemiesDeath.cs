@@ -39,6 +39,7 @@ public class EnemiesDeath : MonoBehaviour
     {
         SoundManager.PlaySound(SoundType.DEATH, 0, false);
         Destroy(gameObject);
+        GameManager.Instance.AddCandy(5);
     }
 
 }

@@ -1415,7 +1415,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre del juego
+  m_text: 'Trick,
+
+    Treat,
+
+    Repeat!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2db4ab6cefc60b54b82157e6aabfec13, type: 2}
   m_sharedMaterial: {fileID: -4363036144983681905, guid: 2db4ab6cefc60b54b82157e6aabfec13, type: 2}
@@ -1442,8 +1446,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 150
-  m_fontSizeBase: 150
+  m_fontSize: 128
+  m_fontSizeBase: 128
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

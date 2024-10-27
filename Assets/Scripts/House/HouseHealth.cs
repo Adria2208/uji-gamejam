@@ -42,6 +42,7 @@ public class HouseHealth : MonoBehaviour
     {
         this.GetComponent<BoxCollider2D>().enabled = false;
         houseSpriteManager.ChangeSprite();
+        GameManager.Instance.AddCandy(50);
     }
 
 }

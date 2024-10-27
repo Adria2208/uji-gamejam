@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     private void HorizontalMovement()
     {
         inputAxis = Input.GetAxis("Horizontal");
-        velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * moveSpeed, (moveSpeed * Time.deltaTime) * acceleration);
+        velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * moveSpeed, moveSpeed * Time.deltaTime * acceleration);
         if (rigidbody.RaycastLateral(Vector2.right * velocity.x))
         {
             velocity.x = 0;

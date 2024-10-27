@@ -57,6 +57,8 @@ public class PlayerDeath : MonoBehaviour
     IEnumerator DeathHandler()
     {
         SoundManager.PlaySound(SoundType.DEATH, 1, false);
+        StartFlashColorAnimation(Color.grey, (float).125, 5);
+        TimeManager.Instance.Stop((float).15);
         yield return new WaitForSeconds(time);
         canHarm = true;
     }
