@@ -18,6 +18,7 @@ public class SideScrolling : MonoBehaviour
             // cameraPosition.x = Mathf.Max(cameraPosition.x, player.position.x);
             // Use this line of code to scroll left and right like normal
             cameraPosition.x = player.position.x;
+            cameraPosition.y = player.position.y + 3;
             transform.position = cameraPosition;
         }
     }

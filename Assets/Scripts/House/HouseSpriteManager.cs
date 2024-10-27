@@ -25,6 +25,14 @@ public class HouseSpriteManager : MonoBehaviour
 
     }
 
-
+    public void ChangeSprite(){
+        if(gameObject.tag == "Trick"){
+            spriteRenderer.sprite = completeTrickSprite;
+        } else if (gameObject.tag == "Treat") {
+            spriteRenderer.sprite = completeTreatSprite;
+        } else {
+            spriteRenderer.sprite = completeTreatSprite;
+        }
+    }
 
 }

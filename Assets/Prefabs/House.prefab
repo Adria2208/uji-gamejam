@@ -161,5 +161,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trickSprite: {fileID: 21300000, guid: b494eb1cf59d8639b90b9f31ab82e28b, type: 3}
   treatSprite: {fileID: 21300000, guid: deffd1cff2475297382718b88762f42d, type: 3}
-  completeTrickSprite: {fileID: 21300000, guid: 263dd7ecb4a27b7d581aa329fd380867, type: 3}
-  completeTreatSprite: {fileID: 21300000, guid: 263dd7ecb4a27b7d581aa329fd380867, type: 3}
+  completeTrickSprite: {fileID: 21300000, guid: b0ebd30b41ad69d3e825e70c71373c6a, type: 3}
+  completeTreatSprite: {fileID: 21300000, guid: 45231658fd4926263b0842e32f90132c, type: 3}

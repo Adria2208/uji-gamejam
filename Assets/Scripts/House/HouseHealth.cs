@@ -2,11 +2,18 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
+[RequireComponent(typeof(HouseSpriteManager))]
 public class HouseHealth : MonoBehaviour
 {
     public int life = 100;
     public Sprite completedSprite;
     public bool complete = false;
+
+    private HouseSpriteManager houseSpriteManager;
+
+    private void Start() {
+        houseSpriteManager = GetComponent<HouseSpriteManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -28,7 +35,7 @@ public class HouseHealth : MonoBehaviour
     private void Die()
     {
         this.GetComponent<BoxCollider2D>().enabled = false;
-        GetComponent<SpriteRenderer>().sprite = completedSprite;
+        houseSpriteManager.ChangeSprite();
     }
 
 }
