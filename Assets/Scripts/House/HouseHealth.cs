@@ -8,16 +8,11 @@ public class HouseHealth : MonoBehaviour
     public Sprite completedSprite;
     public bool complete = false;
 
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
         if (collision.CompareTag(this.gameObject.tag))
         {
-            Debug.Log("Collision");
             if (life <= 0)
             {
                 Die();
@@ -28,7 +23,6 @@ public class HouseHealth : MonoBehaviour
                 life--;
             }
         }
-
 
     }
     private void Die()

@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void SubtractLife()
     {
+        Debug.Log("Hurting Player");
         playerLives--;
         UIManager.Instance.UpdateLivesCounter(playerLives);
     }
